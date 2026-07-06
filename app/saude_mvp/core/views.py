@@ -90,7 +90,7 @@ def cadastrar_usuario(request):
             user.save()
 
             login(request, user)
-            return redirect('listar_consultas')
+            return redirect('dashboard')
     else:
         form = CadastroUserForm()
 

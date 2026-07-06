@@ -64,7 +64,7 @@ class Consulta(models.Model):
 
     data_con = models.DateField()
     hora_con = models.TimeField()
-    status_con = models.CharField(max_length=50, choices=STATUS)
+    status_con = models.CharField(max_length=50, choices=STATUS, default="AGENDADA")
 
     id_pac = models.ForeignKey(Paciente, on_delete=models.PROTECT)
     id_prof = models.ForeignKey(ProfissionalSaude, on_delete=models.PROTECT)
